@@ -1,0 +1,60 @@
+{
+  "name": "feathers-query-filters",
+  "description": "Allows query string filtering of data in Feathers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/feathersjs/feathers-query-filters",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feathersjs/feathers-query-filters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feathersjs/feathers-query-filters/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "feathers",
+    "feathers-plugin",
+    "REST",
+    "Socket.io",
+    "realtime",
+    "nedb",
+    "service",
+    "filters",
+    "sort",
+    "limit",
+    "skip",
+    "select"
+  ],
+  "author": "Feathers <hello@feathersjs.com> (http://feathersjs.com)",
+  "contributors": [
+    "Eric Kryski <e.kryski@gmail.com> (http://erickryski.com)",
+    "David Luecke <daff@neyeon.de> (http://neyeon.com)",
+    "Marshall Thompson <marshall@creativeideal.net> (https://github.com/marshallswain)"
+  ],
+  "main": "lib/feathers-query-filters.js",
+  "scripts": {
+    "publish": "git push origin --tags",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "jshint": "jshint lib/. test/. --config",
+    "mocha": "mocha test/ --recursive --timeout 5000",
+    "test": "npm run jshint && npm run mocha"
+  },
+  "engines": {
+    "node": "~0.10.0",
+    "npm": "~1.4.0"
+  },
+  "dependencies": {
+    "feathers-errors": "^0.2.5",
+    "nedb": "^1.1.2",
+    "uberproto": "^1.1.2"
+  },
+  "devDependencies": {
+    "async": "^1.3.0",
+    "chai": "^3.0.0",
+    "feathers": "^1.1.0-pre.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  }
+}

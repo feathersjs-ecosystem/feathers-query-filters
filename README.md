@@ -1,2 +1,38 @@
-# feathers-query-filters
-Adds support for special query string params used for filtering data
+feathers-query-filters
+=========================
+
+> Adds support for special query string params used for filtering data [FeatherJS](https://github.com/feathersjs)
+
+[![NPM](https://nodei.co/npm/feathers-query-filters.png?downloads=true&stars=true)](https://nodei.co/npm/feathers-query-filters/)
+
+## Installation
+
+```bash
+npm install feathers-query-filters --save
+```
+
+## Getting Started
+
+
+## API
+
+### $sort
+
+### $limit
+
+### $skip
+
+### $select
+
+## Changelog
+
+### 0.1.0
+* Initial release.
+
+## License
+
+[MIT](LICENSE)
+
+## Author
+
+[Eric Kryski](https://github.com/ekryski)
