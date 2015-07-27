@@ -1,7 +1,7 @@
 {
   "name": "feathers-query-filters",
   "description": "Allows query string filtering of data in Feathers",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/feathersjs/feathers-query-filters",
   "repository": {
     "type": "git",
@@ -45,8 +45,7 @@
     "node": "~0.10.0",
     "npm": "~1.4.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.0.0",
     "jshint": "^2.8.0",
