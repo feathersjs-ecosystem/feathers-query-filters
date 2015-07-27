@@ -6,6 +6,7 @@ feathers-query-filters
 [![NPM](https://nodei.co/npm/feathers-query-filters.png?downloads=true&stars=true)](https://nodei.co/npm/feathers-query-filters/)
 
 [![Build Status](https://travis-ci.org/feathersjs/feathers-query-filters.png?branch=master)](https://travis-ci.org/feathersjs/feathers-query-filters)
+[![Code Climate](https://codeclimate.com/github/feathersjs/feathers--query-filters.png)](https://codeclimate.com/github/feathersjs/feathers--query-filters)
 
 ## Installation
 
