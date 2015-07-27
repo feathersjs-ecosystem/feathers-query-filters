@@ -28,7 +28,7 @@ npm install feathers-query-filters --save
 
 ## Changelog
 
-### 0.1.0
+### 1.0.0
 * Initial release.
 
 ## License
