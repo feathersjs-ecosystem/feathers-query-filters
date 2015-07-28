@@ -91,4 +91,26 @@ describe('Feathers Query Filters', function() {
       expect(result.$select).to.be.undefined;
     });
   });
+
+  describe('$populate', function(){
+    beforeEach(function(){
+      this.query = { $populate: 1 };
+    });
+
+    it('returns $populate when present in query', function() {
+      var result = filter(this.query);
+      expect(result.$populate).to.equal(1);
+    });
+
+    it('removes $populate from query when present', function() {
+      filter(this.query);
+      expect(this.query).to.deep.equal({});
+    });
+
+    it('returns undefined when not present in query', function() {
+      var query = { $foo: 1 };
+      var result = filter(query);
+      expect(result.$populate).to.be.undefined;
+    });
+  });
 });

@@ -89,7 +89,12 @@ The following keywords are supported. They are pulled from the query object's co
 
 ### $select
 
+### $populate
+
 ## Changelog
+
+### 1.1.0
+- Adding support for `$populate`
 
 ### 1.0.1
 - Adding usage docs
