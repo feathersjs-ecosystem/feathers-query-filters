@@ -4,6 +4,11 @@ var expect = chai.expect;
 var filter = require('./../lib/feathers-query-filters');
 
 describe('Feathers Query Filters', function() {
+  it('returns an empty object when passed a falsey value', function() {
+    var result = filter();
+    expect(result).to.deep.equal({});
+  });
+
   describe('$sort', function(){
     beforeEach(function(){
       this.query = { $sort: 1 };

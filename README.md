@@ -93,6 +93,9 @@ The following keywords are supported. They are pulled from the query object's co
 
 ## Changelog
 
+### 1.1.1
+- Handling when query is falsey, namely `undefined`
+
 ### 1.1.0
 - Adding support for `$populate`
 
