@@ -1,11 +1,13 @@
-var chai = require('chai');
-var expect = chai.expect;
+/*jshint -W030 */
 
-var filter = require('./../lib/feathers-query-filters');
+import chai from 'chai';
+import filter from '../src/';
+
+const expect = chai.expect;
 
 describe('Feathers Query Filters', function() {
-  describe('$sort', function(){
-    beforeEach(function(){
+  describe('$sort', function() {
+    beforeEach(function() {
       this.query = { $sort: 1 };
     });
 
@@ -26,8 +28,8 @@ describe('Feathers Query Filters', function() {
     });
   });
 
-  describe('$limit', function(){
-    beforeEach(function(){
+  describe('$limit', function() {
+    beforeEach(function() {
       this.query = { $limit: 1 };
     });
 
@@ -48,8 +50,8 @@ describe('Feathers Query Filters', function() {
     });
   });
 
-  describe('$skip', function(){
-    beforeEach(function(){
+  describe('$skip', function() {
+    beforeEach(function() {
       this.query = { $skip: 1 };
     });
 
@@ -70,8 +72,8 @@ describe('Feathers Query Filters', function() {
     });
   });
 
-  describe('$select', function(){
-    beforeEach(function(){
+  describe('$select', function() {
+    beforeEach(function() {
       this.query = { $select: 1 };
     });
 

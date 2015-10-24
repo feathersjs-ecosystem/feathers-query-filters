@@ -1,16 +1,9 @@
 {
   "name": "feathers-query-filters",
-  "description": "Allows query string filtering of data in Feathers",
-  "version": "1.0.0",
+  "description": "Adds support for special query string params used for filtering data",
+  "version": "0.0.0",
   "homepage": "https://github.com/feathersjs/feathers-query-filters",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/feathersjs/feathers-query-filters.git"
-  },
-  "bugs": {
-    "url": "https://github.com/feathersjs/feathers-query-filters/issues"
-  },
-  "license": "MIT",
+  "main": "lib/",
   "keywords": [
     "feathers",
     "feathers-plugin",
@@ -25,30 +18,52 @@
     "skip",
     "select"
   ],
-  "author": "Feathers <hello@feathersjs.com> (http://feathersjs.com)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/feathersjs/feathers-query-filters/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feathersjs/feathers-query-filters.git"
+  },
+  "author": {
+    "name": "Feathers contributors",
+    "email": "hello@feathersjs.com",
+    "url": "https://feathersjs.com"
+  },
   "contributors": [
     "Eric Kryski <e.kryski@gmail.com> (http://erickryski.com)",
     "David Luecke <daff@neyeon.de> (http://neyeon.com)",
     "Marshall Thompson <marshall@creativeideal.net> (https://github.com/marshallswain)"
   ],
-  "main": "lib/feathers-query-filters.js",
+  "bugs": {
+    "url": "https://github.com/feathersjs/feathers-query-filters/issues"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
   "scripts": {
+    "prepublish": "npm run compile",
     "publish": "git push origin --tags",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
-    "jshint": "jshint lib/. test/. --config",
-    "mocha": "mocha test/ --recursive --timeout 5000",
+    "compile": "rm -rf lib/ && babel -d lib/ src/",
+    "jshint": "jshint src/. test/. --config",
+    "mocha": "mocha test/ --compilers js:babel/register",
     "test": "npm run jshint && npm run mocha"
   },
-  "engines": {
-    "node": "~0.10.0",
-    "npm": "~1.4.0"
+  "directories": {
+    "lib": "lib"
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^3.0.0",
+    "babel": "^5.8.29",
+    "chai": "^3.4.0",
+    "feathers": "^1.1.1",
     "jshint": "^2.8.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.3.3"
   }
 }
