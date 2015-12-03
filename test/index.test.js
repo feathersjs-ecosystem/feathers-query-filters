@@ -48,6 +48,11 @@ describe('Feathers Query Filters', function() {
       var result = filter(query);
       expect(result.$limit).to.be.undefined;
     });
+
+    it('parses $limit strings into integers (#4)', function() {
+      var result = filter({ $limit: '2' });
+      expect(result.$limit).to.equal(2);
+    });
   });
 
   describe('$skip', function() {
@@ -69,6 +74,11 @@ describe('Feathers Query Filters', function() {
       var query = { $foo: 1 };
       var result = filter(query);
       expect(result.$skip).to.be.undefined;
+    });
+
+    it('parses $skip strings into integers (#4)', function() {
+      var result = filter({ $skip: '33' });
+      expect(result.$skip).to.equal(33);
     });
   });
 

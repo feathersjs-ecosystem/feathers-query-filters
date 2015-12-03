@@ -5,11 +5,16 @@
  *  for data with a $limit parameter.
  */
 
+function parse(number) {
+  if(typeof number !== 'undefined') {
+    return parseInt(number, 10);
+  }
+}
 export default function(query) {
   var filters = {
     $sort: query.$sort,
-    $limit: query.$limit,
-    $skip: query.$skip,
+    $limit: parse(query.$limit),
+    $skip: parse(query.$skip),
     $select: query.$select
   };
 
