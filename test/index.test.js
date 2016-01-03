@@ -12,7 +12,7 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns $sort when present in query', function() {
-      var result = filter(this.query);
+      let result = filter(this.query);
       expect(result.$sort).to.equal(1);
     });
 
@@ -22,8 +22,8 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns undefined when not present in query', function() {
-      var query = { $foo: 1 };
-      var result = filter(query);
+      let query = { $foo: 1 };
+      let result = filter(query);
       expect(result.$sort).to.be.undefined;
     });
   });
@@ -34,7 +34,7 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns $limit when present in query', function() {
-      var result = filter(this.query);
+      let result = filter(this.query);
       expect(result.$limit).to.equal(1);
     });
 
@@ -44,14 +44,26 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns undefined when not present in query', function() {
-      var query = { $foo: 1 };
-      var result = filter(query);
+      let query = { $foo: 1 };
+      let result = filter(query);
       expect(result.$limit).to.be.undefined;
     });
 
     it('parses $limit strings into integers (#4)', function() {
-      var result = filter({ $limit: '2' });
+      let result = filter({ $limit: '2' });
       expect(result.$limit).to.equal(2);
+    });
+
+    describe('pagination', function() {
+      it('limits with default pagination', function() {
+        let result = filter({}, { default: 10 });
+        expect(result.$limit).to.equal(10);
+      });
+
+      it('limits with max pagination', function() {
+        let result = filter({ $limit: 20 }, { default: 5, max: 10 });
+        expect(result.$limit).to.equal(10);
+      });
     });
   });
 
@@ -61,7 +73,7 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns $skip when present in query', function() {
-      var result = filter(this.query);
+      let result = filter(this.query);
       expect(result.$skip).to.equal(1);
     });
 
@@ -71,13 +83,13 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns undefined when not present in query', function() {
-      var query = { $foo: 1 };
-      var result = filter(query);
+      let query = { $foo: 1 };
+      let result = filter(query);
       expect(result.$skip).to.be.undefined;
     });
 
     it('parses $skip strings into integers (#4)', function() {
-      var result = filter({ $skip: '33' });
+      let result = filter({ $skip: '33' });
       expect(result.$skip).to.equal(33);
     });
   });
@@ -88,7 +100,7 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns $select when present in query', function() {
-      var result = filter(this.query);
+      let result = filter(this.query);
       expect(result.$select).to.equal(1);
     });
 
@@ -98,8 +110,8 @@ describe('Feathers Query Filters', function() {
     });
 
     it('returns undefined when not present in query', function() {
-      var query = { $foo: 1 };
-      var result = filter(query);
+      let query = { $foo: 1 };
+      let result = filter(query);
       expect(result.$select).to.be.undefined;
     });
   });
