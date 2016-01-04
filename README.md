@@ -1,6 +1,6 @@
 # feathers-query-filters
 
-> Adds support for special query string params used for filtering data [FeatherJS](https://github.com/feathersjs)
+> Adds support for special query string params used for filtering data in [FeatherJS](https://github.com/feathersjs)
 
 [![NPM](https://nodei.co/npm/feathers-query-filters.png?downloads=true&stars=true)](https://nodei.co/npm/feathers-query-filters/)
 
