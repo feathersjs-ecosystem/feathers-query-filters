@@ -23,7 +23,8 @@ export default function(query, paginate) {
     $sort: query.$sort,
     $limit: getLimit(parse(query.$limit), paginate),
     $skip: parse(query.$skip),
-    $select: query.$select
+    $select: query.$select,
+    $populate: query.$populate
   };
 
   // Remove the params from the query's conditions.
@@ -31,6 +32,7 @@ export default function(query, paginate) {
   delete query.$limit;
   delete query.$skip;
   delete query.$select;
+  delete query.$populate;
 
   return filters;
 }
