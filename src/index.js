@@ -15,7 +15,8 @@ export default function(query) {
     $sort: query.$sort,
     $limit: parse(query.$limit),
     $skip: parse(query.$skip),
-    $select: query.$select
+    $select: query.$select,
+    $populate: query.$populate
   };
 
   // Remove the params from the query's conditions.
@@ -23,6 +24,7 @@ export default function(query) {
   delete query.$limit;
   delete query.$skip;
   delete query.$select;
+  delete query.$populate;
 
   return filters;
 }
