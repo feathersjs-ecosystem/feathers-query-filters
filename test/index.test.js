@@ -6,6 +6,10 @@ import filter from '../src/';
 const expect = chai.expect;
 
 describe('Feathers Query Filters', function() {
+  it('is CommonJS compatible', () => {
+    expect(typeof require('../lib')).to.equal('function');
+  });
+
   describe('$sort', function() {
     beforeEach(function() {
       this.query = { $sort: 1 };
