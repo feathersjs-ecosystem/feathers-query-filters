@@ -120,17 +120,17 @@ describe('Feathers Query Filters', function() {
     });
   });
   
-  describe('$match', function() {
+  describe('$search', function() {
     beforeEach(function() {
-      this.query = { '$match': {'id': 'first.*' } };      
+      this.query = { '$search': {'id': 'first.*' } };      
     });
     
-    it('returns $match when present in query', function() {
+    it('returns $search when present in query', function() {
       let result = filter(this.query);
-      expect(result.$match).to.deep.equal({'id': 'first.*' });
+      expect(result.$search).to.deep.equal({'id': 'first.*' });
     });
 
-    it('removes $match from query when present', function() {
+    it('removes $search from query when present', function() {
       filter(this.query);
       expect(this.query).to.deep.equal({});
     });
@@ -138,7 +138,7 @@ describe('Feathers Query Filters', function() {
     it('returns undefined when not present in query', function() {
       let query = { $foo: 1 };
       let result = filter(query);
-      expect(result.$match).to.be.undefined;
+      expect(result.$search).to.be.undefined;
     });
   });
 

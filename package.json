@@ -46,7 +46,6 @@
     "node": ">= 0.12.0"
   },
   "scripts": {
-    "build": "npm run compile",    
     "prepublish": "npm run compile",
     "publish": "git push origin && git push origin --tags",
     "release:patch": "npm version patch && npm publish",
