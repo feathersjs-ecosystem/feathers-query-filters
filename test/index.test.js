@@ -119,6 +119,28 @@ describe('Feathers Query Filters', function() {
       expect(result.$select).to.be.undefined;
     });
   });
+  
+  describe('$search', function() {
+    beforeEach(function() {
+      this.query = { '$search': {'id': 'first.*' } };      
+    });
+    
+    it('returns $search when present in query', function() {
+      let result = filter(this.query);
+      expect(result.$search).to.deep.equal({'id': 'first.*' });
+    });
+
+    it('removes $search from query when present', function() {
+      filter(this.query);
+      expect(this.query).to.deep.equal({});
+    });
+
+    it('returns undefined when not present in query', function() {
+      let query = { $foo: 1 };
+      let result = filter(query);
+      expect(result.$search).to.be.undefined;
+    });
+  });
 
   describe('$populate', function() {
     beforeEach(function() {
