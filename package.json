@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "license": "MIT",
   "homepage": "https://github.com/feathersjs/feathers-query-filters",
-  "main": "lib/",
+  "main": "lib/index",
   "keywords": [
     "feathers",
     "feathers-plugin",
