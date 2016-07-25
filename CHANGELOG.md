@@ -1,5 +1,8 @@
 # Change Log
 
+## [v2.0.1](https://github.com/feathersjs/feathers-query-filters/tree/v2.0.1) (2016-07-25)
+[Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v2.0.0...v2.0.1)
+
 ## [v2.0.0](https://github.com/feathersjs/feathers-query-filters/tree/v2.0.0) (2016-07-09)
 [Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v1.5.1...v2.0.0)
 
