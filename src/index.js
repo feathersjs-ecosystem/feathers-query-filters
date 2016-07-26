@@ -25,7 +25,8 @@ export default function(query, paginate) {
     $skip: parse(query.$skip),
     $select: query.$select,
     $populate: query.$populate,
-    $search: query.$search
+    $search: query.$search,
+    $search: query.$like
   };
 
   // Remove the params from the query's conditions.
@@ -35,6 +36,7 @@ export default function(query, paginate) {
   delete query.$select;
   delete query.$populate;
   delete query.$search;
+  delete query.$like;
 
   return filters;
 }
