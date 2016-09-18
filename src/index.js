@@ -3,7 +3,7 @@ const PROPERTIES = ['$sort', '$limit', '$skip', '$select', '$populate'];
 
 function parse(number) {
   if(typeof number !== 'undefined') {
-    return parseInt(number, 10);
+    return Math.abs(parseInt(number, 10));
   }
 }
 
