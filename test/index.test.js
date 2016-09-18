@@ -62,7 +62,9 @@ describe('Feathers Query Filters', function() {
 
       it('limits with max pagination', function() {
         const { filters } = filter({ $limit: 20 }, { default: 5, max: 10 });
+        const { filters: filtersNeg } = filter({ $limit: -20 }, { default: 5, max: 10 });
         expect(filters.$limit).to.equal(10);
+        expect(filtersNeg.$limit).to.equal(10);
       });
     });
   });
