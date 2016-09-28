@@ -15,9 +15,21 @@ function getLimit(limit, paginate) {
   return limit;
 }
 
+function convertSort(sort) {
+  if(typeof sort !== 'object') {
+    return sort;
+  }
+
+  const result = {};
+
+  Object.keys(sort).forEach(key => result[key] = parseInt(sort[key], 10));
+
+  return result;
+}
+
 export default function(query, paginate) {
   let filters = {
-    $sort: query.$sort,
+    $sort: convertSort(query.$sort),
     $limit: getLimit(parse(query.$limit), paginate),
     $skip: parse(query.$skip),
     $select: query.$select,
