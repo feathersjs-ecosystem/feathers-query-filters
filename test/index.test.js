@@ -11,13 +11,15 @@ describe('Feathers Query Filters', function() {
   });
 
   describe('$sort', function() {
-    beforeEach(function() {
-      this.query = { $sort: 1 };
+    it('returns $sort when present in query', function() {
+      const { filters, query } = filter({ $sort: { name: 1 } });
+      expect(filters.$sort.name).to.equal(1);
+      expect(query).to.deep.equal({});
     });
 
-    it('returns $sort when present in query', function() {
-      const { filters, query } = filter(this.query);
-      expect(filters.$sort).to.equal(1);
+    it('converts strings in $sort', function() {
+      const { filters, query } = filter({ $sort: { test: '-1' } });
+      expect(filters.$sort.test).to.equal(-1);
       expect(query).to.deep.equal({});
     });
 
