@@ -1,5 +1,31 @@
 # Change Log
 
+## [v2.1.1](https://github.com/feathersjs/feathers-query-filters/tree/v2.1.1) (2016-10-14)
+[Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v2.1.0...v2.1.1)
+
+**Merged pull requests:**
+
+- add the posibility to send an object to sort and add the test for that [\#24](https://github.com/feathersjs/feathers-query-filters/pull/24) ([stalinb87](https://github.com/stalinb87))
+
+## [v2.1.0](https://github.com/feathersjs/feathers-query-filters/tree/v2.1.0) (2016-09-28)
+[Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v2.0.2...v2.1.0)
+
+**Merged pull requests:**
+
+- Convert sort parameters to integers [\#21](https://github.com/feathersjs/feathers-query-filters/pull/21) ([daffl](https://github.com/daffl))
+
+## [v2.0.2](https://github.com/feathersjs/feathers-query-filters/tree/v2.0.2) (2016-09-18)
+[Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v2.0.1...v2.0.2)
+
+**Closed issues:**
+
+- Max pagination limit bug [\#19](https://github.com/feathersjs/feathers-query-filters/issues/19)
+
+**Merged pull requests:**
+
+- Fix max pagination limit [\#20](https://github.com/feathersjs/feathers-query-filters/pull/20) ([samhunta](https://github.com/samhunta))
+- Update mocha to version 3.0.0 🚀 [\#18](https://github.com/feathersjs/feathers-query-filters/pull/18) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
 ## [v2.0.1](https://github.com/feathersjs/feathers-query-filters/tree/v2.0.1) (2016-07-25)
 [Full Changelog](https://github.com/feathersjs/feathers-query-filters/compare/v2.0.0...v2.0.1)
 
