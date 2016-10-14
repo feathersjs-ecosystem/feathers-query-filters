@@ -17,6 +17,12 @@ describe('Feathers Query Filters', function() {
       expect(query).to.deep.equal({});
     });
 
+    it('returns $sort when present in query as an object', function() {
+      const { filters, query } = filter({ $sort: { name: {something: 10} } });
+      expect(filters.$sort.name.something).to.equal(10);
+      expect(query).to.deep.equal({});
+    });
+
     it('converts strings in $sort', function() {
       const { filters, query } = filter({ $sort: { test: '-1' } });
       expect(filters.$sort.test).to.equal(-1);

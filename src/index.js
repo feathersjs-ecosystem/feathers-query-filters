@@ -22,7 +22,7 @@ function convertSort(sort) {
 
   const result = {};
 
-  Object.keys(sort).forEach(key => result[key] = parseInt(sort[key], 10));
+  Object.keys(sort).forEach(key => result[key] = typeof sort[key] === 'object' ? sort[key] : parseInt(sort[key], 10));
 
   return result;
 }
