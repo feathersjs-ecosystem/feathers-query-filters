@@ -1,5 +1,3 @@
-/* jshint -W030 */
-
 import chai from 'chai';
 import filter from '../src/';
 
