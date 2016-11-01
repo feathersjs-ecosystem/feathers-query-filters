@@ -69,7 +69,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "lodash.omit": "^4.3.0"
+    "feathers-commons": "^0.7.8"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
