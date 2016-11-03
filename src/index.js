@@ -1,4 +1,5 @@
-const omit = require('lodash.omit');
+import { _ } from 'feathers-commons/lib/utils';
+
 const PROPERTIES = ['$sort', '$limit', '$skip', '$select', '$populate'];
 
 function parse (number) {
@@ -36,5 +37,5 @@ export default function (query, paginate) {
     $populate: query.$populate
   };
 
-  return { filters, query: omit(query, ...PROPERTIES) };
+  return { filters, query: _.omit(query, ...PROPERTIES) };
 }
