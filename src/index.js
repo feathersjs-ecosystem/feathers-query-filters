@@ -1,4 +1,4 @@
-import { _ } from 'feathers-commons/lib/utils';
+import { _ } from 'feathers-commons';
 
 const PROPERTIES = ['$sort', '$limit', '$skip', '$select', '$populate'];
 
