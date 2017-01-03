@@ -60,6 +60,11 @@ describe('Feathers Query Filters', function () {
       expect(filters.$limit).to.equal(2);
     });
 
+    it('allows $limit 0', function () {
+      const { filters } = filter({ $limit: 0 }, { default: 10 });
+      expect(filters.$limit).to.equal(0);
+    });
+
     describe('pagination', function () {
       it('limits with default pagination', function () {
         const { filters } = filter({}, { default: 10 });

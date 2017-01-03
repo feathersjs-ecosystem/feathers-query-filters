@@ -10,7 +10,10 @@ function parse (number) {
 
 function getLimit (limit, paginate) {
   if (paginate && paginate.default) {
-    return Math.min(limit || paginate.default, paginate.max || Number.MAX_VALUE);
+    const lower = typeof limit === 'number' ? limit : paginate.default;
+    const upper = typeof paginate.max === 'number' ? paginate.max : Number.MAX_VALUE;
+
+    return Math.min(lower, upper);
   }
 
   return limit;
