@@ -12,7 +12,7 @@
 
 ## Getting Started
 
-`feathers-query-filters` is used internally the [database service adapters](http://docs.feathersjs.com/databases/readme.html) to support [pagination and sorting](http://docs.feathersjs.com/databases/pagination.html).
+`feathers-query-filters` is used internally by the [database service adapters](http://docs.feathersjs.com/databases/readme.html) to support [pagination and sorting](http://docs.feathersjs.com/databases/pagination.html).
 
 ## License
 
