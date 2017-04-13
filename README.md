@@ -1,5 +1,7 @@
 # feathers-query-filters
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feathersjs/feathers-query-filters.svg)](https://greenkeeper.io/)
+
 > Adds support for special query string params used for filtering data in [FeatherJS](https://github.com/feathersjs)
 
 [![Build Status](https://travis-ci.org/feathersjs/feathers-query-filters.png?branch=master)](https://travis-ci.org/feathersjs/feathers-query-filters)
