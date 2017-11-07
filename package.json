@@ -55,7 +55,7 @@
     "lint": "eslint-if-supported semistandard --fix",
     "mocha": "mocha --opts mocha.opts",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
-    "test": "npm run compile && npm run lint && npm run coverage && nsp check"
+    "test": "npm run compile && npm run lint && npm run coverage"
   },
   "semistandard": {
     "env": [
@@ -81,7 +81,6 @@
     "feathers": "^2.0.0",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^4.0.0",
-    "nsp": "^2.2.0",
     "rimraf": "^2.5.4",
     "semistandard": "^11.0.0"
   }
