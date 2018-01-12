@@ -11,6 +11,7 @@
 [![Download Status](https://img.shields.io/npm/dm/feathers-query-filters.svg?style=flat-square)](https://www.npmjs.com/package/feathers-query-filters)
 [![Slack Status](http://slack.feathersjs.com/badge.svg)](http://slack.feathersjs.com)
 
+> __Important:__ This package has been integrated into [@feathersjs/commons](https://github.com/feathersjs/commons) (`const { filterQuery } = require('@feathersjs/commons')`).
 
 ## Getting Started
 

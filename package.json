@@ -68,6 +68,22 @@
   "directories": {
     "lib": "lib"
   },
+  "greenkeeper": {
+    "ignore": [
+      "feathers-commons",
+      "babel-cli",
+      "babel-core",
+      "babel-plugin-add-module-exports",
+      "babel-preset-es2015",
+      "chai",
+      "eslint-if-supported",
+      "feathers",
+      "istanbul",
+      "mocha",
+      "rimraf",
+      "semistandard"
+    ]
+  },
   "dependencies": {
     "feathers-commons": "^0.8.0"
   },
